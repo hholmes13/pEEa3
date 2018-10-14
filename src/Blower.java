@@ -1,5 +1,5 @@
 /*
- * File: Heater.java
+ * File: Blower.java
  * Author: Hunter Holmes hholmes1@uab.edu
  * Assignment:  P3
  * Vers: 1.0.0 09/17/2018 hah - initial coding
@@ -7,71 +7,80 @@
  */
 
 /**
- * Model a heater whose state is changed by a controller
+ * Model a blower to move hot air from the heater to the room
  *
  * @author Hunter Holmes hholmes1@uab.edu
  */
-public class Heater {
+public class Blower {
 
     // Variables used in this class
-    private static long hUIDSource = 20000;
+    private static long bUIDSource = 30000;
 
-    private long hUID;
-    public boolean state;
+    private long bUID;
+    private boolean state;
     public String status;
 
     public Logger logger;
+    public Heater heater;
 
     /**
-     * Constructor for a heater Increases count of heaters and creates a unique
-     * ID for a new heater
+     * Default Constructor for Blower
      */
-    public Heater(Logger logger) {
-        this.hUID = hUIDSource++;
+    public Blower() {
+
+    }
+
+    /**
+     *  Creates blower with a logger
+     * @param logger 
+     * @param heater
+     */
+    public Blower(Logger logger) {
+        this.bUID = bUIDSource++;
         this.state = false;
         this.status = "OFF";
         this.logger = logger;
     }
+    
+    public void addHeater(Heater heater){
+        this.heater = heater;
+    }
 
     /**
-     * passes up the unique ID for a particular heater object
+     * passes up the unique ID for a particular blower object
      *
      * @return UID
      */
     public long getUID() {
-        return hUID;
+        return bUID;
     }
 
     /**
-     * sets state for the heater when prompted to change converts true/false to
-     * ON/OFF for ease of displaying status
-     *
-     * @param state
+     * Allows  controller to set current blower state
+     * @param state 
      */
     public void setState(boolean state) {
 
         if (state == true) {
             this.status = "ON";
             this.state = true;
-            
-            if(this.logger != null){
-                this.logger.log(10, "Heater is switched ON"); 
+
+            if (this.logger != null) {
+                this.logger.log(10, "Blower is switched ON");
             }
-            
+
         } else {
             this.status = "OFF";
             this.state = false;
-            
-            if(this.logger != null){
-                this.logger.log(10, "Heater is switched OFF");
+
+            if (this.logger != null) {
+                this.logger.log(10, "Blower is switched OFF");
             }
         }
     }
 
     /**
-     * returns the heater state as a boolean true or false true = ON, false =
-     * OFF
-     *
+     * Returns current state of blower
      * @return state
      */
     public boolean getState() {
@@ -80,7 +89,7 @@ public class Heater {
 
     /**
      * converts true/false to ON/OFF for ease of displaying status returns the
-     * string “Heater:{UID} = {status}”
+     * string “Blower:{UID} = {status}”
      * @return formatted string
      */
     @Override
@@ -92,7 +101,7 @@ public class Heater {
             this.status = "OFF";
             this.state = false;
         }
-        return ("Heater:" + this.hUID + " = " + this.status);
+        return ("Blower:" + this.bUID + " = " + this.status);
     }
 
 }

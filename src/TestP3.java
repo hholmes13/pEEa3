@@ -8,7 +8,7 @@
  */
 
 /**
- * Test program for P2
+ * Test program for P3
  * @author David Green DGreen@uab.edu
  */
 public class TestP3 {
@@ -16,6 +16,7 @@ public class TestP3 {
     public static void main(String[] args) {
 
         Heater h1;
+        Blower b1;
         TempSensor ts1;
         Controller controller;
         Logger logger;
@@ -26,6 +27,7 @@ public class TestP3 {
 
         logger = new PrintLogger(20);
         h1 = new Heater(logger);
+        b1 = new Blower(logger);
         ts1 = new TempSensor(logger);
         controller = new Controller(logger);
         clock = new Clock(logger);
@@ -33,6 +35,7 @@ public class TestP3 {
         // Wire up controller
         controller.connect(ts1);    // connect temperature sensor
         controller.connect(h1);     // connect heater
+        controller.connect(b1);     // connect blower
 
         clock.add(controller);
 
@@ -48,7 +51,7 @@ public class TestP3 {
             70.5, 67.7, 75.9, 70.5, 67.7, 75.9, 74.5, 73.7, 73.4, 73.2, 73.1, 69.0};
 
         room = new Room(disturb, 70.);
-        room.add(h1);
+        room.add(b1);
         room.add(ts1);
         clock.add(room);
 

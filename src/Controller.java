@@ -1,7 +1,7 @@
 /*
  * File: Controller.java
  * Author: Hunter Holmes hholmes1@uab.edu
- * Assignment:  P2
+ * Assignment:  P3
  * Vers: 1.0.0 09/17/2018 hah - initial coding
  * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  */
@@ -14,9 +14,11 @@
  */
 public class Controller implements Clockable {
 
-   private TempSensor   tempSensor;         // input to controller
+    private TempSensor   tempSensor;         // input to controller
     private Heater       heater;             // heat output of controller
     private boolean      presentHeatState;   // present command to heater
+    private Blower       blower;
+    private boolean      presentBlowerState;
     
     // Configuration 
     private final double LOW_HEAT_TEMP     = 68.0;
@@ -79,6 +81,17 @@ public class Controller implements Clockable {
         this.heater.setState(false);
         logger.log(Logger.INFO, "Connect Heater " + heater);
     }
+    
+    /**
+     * Connect blower to the controller
+     * Only one connection at a time is possible
+     * @param blower 
+     */
+    public void connect(Blower blower){
+        this.blower = blower;
+        this.blower.setState(false);
+        logger.log(Logger.INFO,"Connect Blower " + blower);
+    }
 
     /**
      * Do actions before clock (none needed yet)
@@ -100,8 +113,9 @@ public class Controller implements Clockable {
                     ( presentHeatState && !(temp > HIGH_HEAT_TEMP) );
         
         heater.setState(s);
+        blower.setState(s);
         presentHeatState = s;
-        logger.log(Logger.INFO, "Temperature is " + temp + ", set heater to " + s);
+        logger.log(Logger.INFO, "Temperature is " + temp + ", set heater and blower to " + s);
     }
 
 }

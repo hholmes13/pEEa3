@@ -1,15 +1,14 @@
 /*
-  * File: Clock.java
-  * Author: Hunter Holmes hholmes1@uab.edu
-  * Assignment:  P2
-  * Vers: 1.0.0 09/17/2018 hah - initial coding
-  * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
+ * File: Clock.java
+ * Author: Hunter Holmes hholmes1@uab.edu
+ * Assignment:  P3
+ * Vers: 1.0.0 09/17/2018 hah - initial coding
+ * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  */
-
 import java.util.ArrayList;
 
 /**
- * Use clock to send clock to pulse to clockable objects
+ * Model a room with temperature being controlled with the use of a heater
  * @author Hunter Holmes hholmes1@uab.edu
  */
 public class Clock {

@@ -1,7 +1,7 @@
 /*
  * File: Room.java
  * Author: Hunter Holmes hholmes1@uab.edu
- * Assignment:  P2
+ * Assignment:  P3
  * Vers: 1.0.0 09/17/2018 hah - initial coding
  * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  */
@@ -13,7 +13,7 @@
 public class Room implements Clockable {
 
     //Variables used in this class
-    public Heater heater;
+    public Blower blower;
     public TempSensor tempSensor;
 
     private double[] disturbance;
@@ -48,11 +48,11 @@ public class Room implements Clockable {
     }
 
     /**
-     * add a heater to a room
-     * @param htr
+     * add a blower to a room
+     * @param blwr
      */
-    public void add(Heater htr) {
-        heater = htr;
+    public void add(Blower blwr) {
+        blower = blwr;
     }
 
     /**
@@ -61,7 +61,7 @@ public class Room implements Clockable {
      */
     @Override
     public void preClock() {
-        if (heater.getState()) {
+        if (blower.heater.getState()) {
             roomTemp = (roomTemp + disturbance[dIndex] + HOT_AIR) / 3.;
         } else {
             roomTemp = (roomTemp + disturbance[dIndex]) / 2.;
