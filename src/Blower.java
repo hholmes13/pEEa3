@@ -42,7 +42,7 @@ public class Blower {
         this.logger = logger;
     }
     
-    public void addHeater(Heater heater){
+    public void add(Heater heater){
         this.heater = heater;
     }
 
@@ -61,7 +61,7 @@ public class Blower {
      */
     public void setState(boolean state) {
 
-        if (state == true) {
+        if (state == true && heater.state == true) {
             this.status = "ON";
             this.state = true;
 

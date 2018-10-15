@@ -52,6 +52,7 @@ public class TestP3 {
 
         room = new Room(disturb, 70.);
         room.add(b1);
+        b1.add(h1);
         room.add(ts1);
         clock.add(room);
 
