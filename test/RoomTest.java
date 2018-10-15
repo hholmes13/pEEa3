@@ -18,6 +18,7 @@ public class RoomTest {
     private Room       room;
     private TempSensor ts1;
     private Heater     h1;
+    private Blower     b1;
     
     private double[]   disturb        = {65,   65,    65,    65,   65,    65,    65,   65,    
             65,    65,   65,    65,    65,   65,    73,    73,    73,    73,    73,    65    };
@@ -36,9 +37,10 @@ public class RoomTest {
         room = new Room(disturb, INITIAL_TEMP );
         ts1  = new TempSensor(null);
         h1   = new Heater(null);
+        b1 = new Blower(null);
         
         room.add(ts1);
-        room.add(h1);
+        room.add(b1);
     }
 
     /**
