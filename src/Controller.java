@@ -15,10 +15,12 @@
 public class Controller implements Clockable {
 
     private TempSensor   tempSensor;         // input to controller
+    
     private Heater       heater;             // heat output of controller
     private boolean      presentHeatState;   // present command to heater
-    private Blower       blower;
-    private boolean      presentBlowerState;
+    
+    private Blower       blower;             // blower output of controller
+    private boolean      presentBlowerState; // present command to blower
     
     // Configuration 
     private final double LOW_HEAT_TEMP     = 68.0;
@@ -35,6 +37,7 @@ public class Controller implements Clockable {
     public Controller(Logger logger) {
         this.logger = (logger != null) ? logger : new NullLogger();
         presentHeatState = false;
+        presentBlowerState =false;
     }
     
     // Queries
@@ -51,8 +54,10 @@ public class Controller implements Clockable {
                                                         : tempSensor.toString();
         String heaterString     = (heater == null )     ? "no heater"
                                                         : heater.toString();
+        String blowerString     = (blower == null)      ? "no blower"
+                                                        : blower.toString();
         
-        return "Controller with " + tempSensorString + " and " + heaterString;
+        return "Controller with " + tempSensorString + " and " + blowerString + " and " + heaterString;
     }
 
     // Commands
@@ -65,7 +70,7 @@ public class Controller implements Clockable {
      * @param  ts temperature sensor
      */
     public void connect(TempSensor ts) {
-        tempSensor = ts;
+        this.tempSensor = ts;
         logger.log(Logger.INFO, "Connect Temperature Sensor " + ts);
     }
 
@@ -103,7 +108,7 @@ public class Controller implements Clockable {
     
     /**
      * Do one pass of the controller (read the temperature, determine 
-     * whether to turn heater on or off, and then do it)
+     * whether to turn heater & blower on or off, and then do it)
      */
     @Override
     public void clock() {
@@ -115,6 +120,7 @@ public class Controller implements Clockable {
         heater.setState(s);
         blower.setState(s);
         presentHeatState = s;
+        presentBlowerState = s;
         logger.log(Logger.INFO, "Temperature is " + temp + ", set heater and blower to " + s);
     }
 

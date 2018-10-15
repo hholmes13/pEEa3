@@ -55,7 +55,7 @@ public class Heater {
             this.state = true;
             
             if(this.logger != null){
-                this.logger.log(10, "Heater is switched ON"); 
+                this.logger.log(Logger.INFO, "Heater is switched ON"); 
             }
             
         } else {
@@ -63,7 +63,7 @@ public class Heater {
             this.state = false;
             
             if(this.logger != null){
-                this.logger.log(10, "Heater is switched OFF");
+                this.logger.log(Logger.INFO, "Heater is switched OFF");
             }
         }
     }

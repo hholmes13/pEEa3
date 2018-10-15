@@ -51,8 +51,8 @@ public class Room implements Clockable {
      * add a blower to a room
      * @param blwr
      */
-    public void add(Blower blwr) {
-        blower = blwr;
+    public void add(Blower blower) {
+        this.blower = blower;
     }
 
     /**
@@ -62,7 +62,7 @@ public class Room implements Clockable {
     @Override
     public void preClock() {
         if (blower.heater.getState()) {
-            roomTemp = (roomTemp + disturbance[dIndex] + HOT_AIR) / 3.;
+            roomTemp = (roomTemp + disturbance[dIndex] + this.blower.outputTemp) / 3.;
         } else {
             roomTemp = (roomTemp + disturbance[dIndex]) / 2.;
         }

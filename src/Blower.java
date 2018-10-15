@@ -22,6 +22,10 @@ public class Blower {
 
     public Logger logger;
     public Heater heater;
+    
+    public double outputTemp;
+    
+    
 
     /**
      * Default Constructor for Blower
@@ -64,9 +68,10 @@ public class Blower {
         if (state == true && heater.state == true) {
             this.status = "ON";
             this.state = true;
+            this.outputTemp = 95.0;
 
             if (this.logger != null) {
-                this.logger.log(10, "Blower is switched ON");
+                this.logger.log(Logger.INFO, "Blower is switched ON");
             }
 
         } else {
@@ -74,7 +79,7 @@ public class Blower {
             this.state = false;
 
             if (this.logger != null) {
-                this.logger.log(10, "Blower is switched OFF");
+                this.logger.log(Logger.INFO, "Blower is switched OFF");
             }
         }
     }

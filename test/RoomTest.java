@@ -41,6 +41,7 @@ public class RoomTest {
         
         room.add(ts1);
         room.add(b1);
+        b1.add(h1);
     }
 
     /**
