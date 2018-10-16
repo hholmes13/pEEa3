@@ -20,6 +20,7 @@ public class ControllerTest {
     private Blower b1;
     private TempSensor ts1;
     private Controller controller;
+    private String exceptionString;
 
     public ControllerTest() {
     }
@@ -45,13 +46,13 @@ public class ControllerTest {
         controller.connect(h1);
         expectedValue = "Controller with no temperature sensor and no blower and " + h1.toString();
         assertEquals(expectedValue, controller.toString());
-        
+
         controller.connect(b1);
-        expectedValue = "Controller with no temperature sensor and " + b1.toString() + " and " +  h1.toString();
+        expectedValue = "Controller with no temperature sensor and " + b1.toString() + " and " + h1.toString();
         assertEquals(expectedValue, controller.toString());
 
         controller.connect(ts1);
-        expectedValue = "Controller with " + ts1.toString() + " and " +  b1.toString() + " and " +  h1.toString();
+        expectedValue = "Controller with " + ts1.toString() + " and " + b1.toString() + " and " + h1.toString();
         assertEquals(expectedValue, controller.toString());
     }
 
@@ -59,7 +60,7 @@ public class ControllerTest {
      * Test of clock method, of class Controller.
      */
     @Test
-    public void testOperation()throws MissingComponentException {
+    public void testOperation() throws MissingComponentException {
 
         double[] temps = {65.0, 67.0, 68.0, 70.0, 71.0, 72.0, 71.0, 68.0, 67.0};
         boolean[] expected = {true, true, true, true, true, false, false, false, true};
@@ -78,10 +79,11 @@ public class ControllerTest {
     }
 
     /**
-     * Test connection between Heater and Blower, to see that they come and go together
+     * Test connection between Heater and Blower, to see that they come and go
+     * together
      */
     @Test
-    public void testHeaterBlowerRelationship()throws MissingComponentException {
+    public void testHeaterBlowerRelationship() throws MissingComponentException {
 
         double[] temps = {65.0, 67.0, 68.0, 70.0, 71.0, 72.0, 71.0, 68.0, 67.0};
         boolean[] expected = {true, true, true, true, true, false, false, false, true};
@@ -97,6 +99,90 @@ public class ControllerTest {
             controller.clock();
             assertEquals(expected[i], (b1.getState() && h1.getState()));
         }
+    }
+    
+     /**
+     * Test MissingComponentException in the case of no missing components
+     * @throws MissingComponentException
+     */
+    @Test
+    public void testNoMissingComponents() {
+
+        controller.connect(h1);
+        controller.connect(b1);
+        b1.add(h1);
+        controller.connect(ts1);
+
+        try {
+            controller.preClock();
+        } catch (MissingComponentException e) {
+            exceptionString = e.getMessage();
+        }
+
+        assertEquals(null, exceptionString);
+    }
+
+    /**
+     * Test MissingComponentException in the case of missing heater
+     * @throws MissingComponentException
+     */
+    @Test
+    public void testMissingHeater() {
+
+        //controller.connect(h1);
+        controller.connect(b1);
+        //b1.add(h1);
+        controller.connect(ts1);
+
+        try {
+            controller.preClock();
+        } catch (MissingComponentException e) {
+            exceptionString = e.getMessage();
+        }
+
+        assertEquals("Error: No Heater Connected", exceptionString);
+    }
+
+    /**
+     * Test MissingComponentException in the case of missing blower
+     * @throws MissingComponentException
+     */
+    @Test
+    public void testMissingBlower() {
+
+        controller.connect(h1);
+        //controller.connect(b1);
+        //b1.add(h1);
+        controller.connect(ts1);
+
+        try {
+            controller.preClock();
+        } catch (MissingComponentException e) {
+            exceptionString = e.getMessage();
+        }
+
+        assertEquals("Error: No Blower Connected", exceptionString);
+    }
+
+    /**
+     * Test MissingComponentException in the case of missing Temp Sensor
+     * @throws MissingComponentException
+     */
+    @Test
+    public void testMissingTempSensor() {
+
+        controller.connect(h1);
+        controller.connect(b1);
+        b1.add(h1);
+        //controller.connect(ts1);
+
+        try {
+            controller.preClock();
+        } catch (MissingComponentException e) {
+            exceptionString = e.getMessage();
+        }
+
+        assertEquals("Error: No Temperature Sensor Connected", exceptionString);
     }
 
 }

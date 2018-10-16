@@ -104,10 +104,13 @@ public class Controller implements Clockable {
     @Override
     public void preClock() throws MissingComponentException {
         if (blower == null){
+            logger.log(Logger.ERROR,"Error: No Blower Connected");
             throw new MissingComponentException("Error: No Blower Connected");
         }else if(heater == null){
+            logger.log(Logger.ERROR,"Error: No Heater Connected");
             throw new MissingComponentException("Error: No Heater Connected");
         }else if(tempSensor == null){
+            logger.log(Logger.ERROR,"Error: No Temperature Sensor Connected");
             throw new MissingComponentException("Error: No Temperature Sensor Connected");
         }else{
             //Do nothing

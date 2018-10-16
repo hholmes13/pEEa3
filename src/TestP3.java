@@ -25,7 +25,7 @@ public class TestP3 {
         print("P3 Test program by David Green dgreen@uab.edu");
         print("Testing P3 by Hunter Holmes hholmes1@uab.edu ");
 
-        logger = new PrintLogger(20);
+        logger = new PrintLogger(0);
         h1 = new Heater(logger);
         b1 = new Blower(logger);
         ts1 = new TempSensor(logger);
