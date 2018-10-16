@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  * Test the Controller operation (without logging)
- *
+ * @author David Green DGreen@uab.edu
  * @author Hunter Holmes hholmes1@uab.edu
  */
 public class ControllerTest {
