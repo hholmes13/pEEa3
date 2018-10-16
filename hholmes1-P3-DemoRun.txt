@@ -1,0 +1,228 @@
+P3 Test program by David Green dgreen@uab.edu
+Testing P3 by Hunter Holmes hholmes1@uab.edu 
+Connect Temperature Sensor TS:10000 = NaN
+Heater is switched OFF
+Connect Heater Heater:20000 = OFF
+Blower is switched OFF
+Connect Blower Blower:30000 = OFF
+Heater is switched OFF
+--- Clocking to 1 seconds.
+Preclocking Controller with TS:10000 = NaN and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 67 degrees F
+Clocking Controller with TS:10000 = 67.5 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched ON
+Blower is switched ON
+Temperature is 67.5, set heater to true and blower to true
+Clocking Room
+Passes: room State 0
+Passes: room Temp 0
+--- Clocking to 2 seconds.
+Preclocking Controller with TS:10000 = 67.5 and Blower:30000 = ON and Heater:20000 = ON
+Preclocking Room
+Temperature Sensor Temp is: 75 degrees F
+Clocking Controller with TS:10000 = 75.83333333333333 and Blower:30000 = ON and Heater:20000 = ON
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 75.83333333333333, set heater to false and blower to false
+Clocking Room
+Passes: room State 1
+Passes: room Temp 1
+--- Clocking to 3 seconds.
+Preclocking Controller with TS:10000 = 75.83333333333333 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 70 degrees F
+Clocking Controller with TS:10000 = 70.41666666666666 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 70.41666666666666, set heater to false and blower to false
+Clocking Room
+Passes: room State 2
+Passes: room Temp 2
+--- Clocking to 4 seconds.
+Preclocking Controller with TS:10000 = 70.41666666666666 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 67 degrees F
+Clocking Controller with TS:10000 = 67.70833333333333 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched ON
+Blower is switched ON
+Temperature is 67.70833333333333, set heater to true and blower to true
+Clocking Room
+Passes: room State 3
+Passes: room Temp 3
+--- Clocking to 5 seconds.
+Preclocking Controller with TS:10000 = 67.70833333333333 and Blower:30000 = ON and Heater:20000 = ON
+Preclocking Room
+Temperature Sensor Temp is: 75 degrees F
+Clocking Controller with TS:10000 = 75.90277777777777 and Blower:30000 = ON and Heater:20000 = ON
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 75.90277777777777, set heater to false and blower to false
+Clocking Room
+Passes: room State 4
+Passes: room Temp 4
+--- Clocking to 6 seconds.
+Preclocking Controller with TS:10000 = 75.90277777777777 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 70 degrees F
+Clocking Controller with TS:10000 = 70.45138888888889 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 70.45138888888889, set heater to false and blower to false
+Clocking Room
+Passes: room State 5
+Passes: room Temp 5
+--- Clocking to 7 seconds.
+Preclocking Controller with TS:10000 = 70.45138888888889 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 67 degrees F
+Clocking Controller with TS:10000 = 67.72569444444444 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched ON
+Blower is switched ON
+Temperature is 67.72569444444444, set heater to true and blower to true
+Clocking Room
+Passes: room State 6
+Passes: room Temp 6
+--- Clocking to 8 seconds.
+Preclocking Controller with TS:10000 = 67.72569444444444 and Blower:30000 = ON and Heater:20000 = ON
+Preclocking Room
+Temperature Sensor Temp is: 75 degrees F
+Clocking Controller with TS:10000 = 75.90856481481482 and Blower:30000 = ON and Heater:20000 = ON
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 75.90856481481482, set heater to false and blower to false
+Clocking Room
+Passes: room State 7
+Passes: room Temp 7
+--- Clocking to 9 seconds.
+Preclocking Controller with TS:10000 = 75.90856481481482 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 70 degrees F
+Clocking Controller with TS:10000 = 70.45428240740742 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 70.45428240740742, set heater to false and blower to false
+Clocking Room
+Passes: room State 8
+Passes: room Temp 8
+--- Clocking to 10 seconds.
+Preclocking Controller with TS:10000 = 70.45428240740742 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 67 degrees F
+Clocking Controller with TS:10000 = 67.72714120370371 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched ON
+Blower is switched ON
+Temperature is 67.72714120370371, set heater to true and blower to true
+Clocking Room
+Passes: room State 9
+Passes: room Temp 9
+--- Clocking to 11 seconds.
+Preclocking Controller with TS:10000 = 67.72714120370371 and Blower:30000 = ON and Heater:20000 = ON
+Preclocking Room
+Temperature Sensor Temp is: 75 degrees F
+Clocking Controller with TS:10000 = 75.90904706790123 and Blower:30000 = ON and Heater:20000 = ON
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 75.90904706790123, set heater to false and blower to false
+Clocking Room
+Passes: room State 10
+Passes: room Temp 10
+--- Clocking to 12 seconds.
+Preclocking Controller with TS:10000 = 75.90904706790123 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 70 degrees F
+Clocking Controller with TS:10000 = 70.4545235339506 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 70.4545235339506, set heater to false and blower to false
+Clocking Room
+Passes: room State 11
+Passes: room Temp 11
+--- Clocking to 13 seconds.
+Preclocking Controller with TS:10000 = 70.4545235339506 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 67 degrees F
+Clocking Controller with TS:10000 = 67.7272617669753 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched ON
+Blower is switched ON
+Temperature is 67.7272617669753, set heater to true and blower to true
+Clocking Room
+Passes: room State 12
+Passes: room Temp 12
+--- Clocking to 14 seconds.
+Preclocking Controller with TS:10000 = 67.7272617669753 and Blower:30000 = ON and Heater:20000 = ON
+Preclocking Room
+Temperature Sensor Temp is: 75 degrees F
+Clocking Controller with TS:10000 = 75.90908725565843 and Blower:30000 = ON and Heater:20000 = ON
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 75.90908725565843, set heater to false and blower to false
+Clocking Room
+Passes: room State 13
+Passes: room Temp 13
+--- Clocking to 15 seconds.
+Preclocking Controller with TS:10000 = 75.90908725565843 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 74 degrees F
+Clocking Controller with TS:10000 = 74.45454362782922 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 74.45454362782922, set heater to false and blower to false
+Clocking Room
+Passes: room State 14
+Passes: room Temp 14
+--- Clocking to 16 seconds.
+Preclocking Controller with TS:10000 = 74.45454362782922 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 73 degrees F
+Clocking Controller with TS:10000 = 73.72727181391461 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 73.72727181391461, set heater to false and blower to false
+Clocking Room
+Passes: room State 15
+Passes: room Temp 15
+--- Clocking to 17 seconds.
+Preclocking Controller with TS:10000 = 73.72727181391461 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 73 degrees F
+Clocking Controller with TS:10000 = 73.36363590695731 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 73.36363590695731, set heater to false and blower to false
+Clocking Room
+Passes: room State 16
+Passes: room Temp 16
+--- Clocking to 18 seconds.
+Preclocking Controller with TS:10000 = 73.36363590695731 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 73 degrees F
+Clocking Controller with TS:10000 = 73.18181795347866 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 73.18181795347866, set heater to false and blower to false
+Clocking Room
+Passes: room State 17
+Passes: room Temp 17
+--- Clocking to 19 seconds.
+Preclocking Controller with TS:10000 = 73.18181795347866 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 73 degrees F
+Clocking Controller with TS:10000 = 73.09090897673933 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 73.09090897673933, set heater to false and blower to false
+Clocking Room
+Passes: room State 18
+Passes: room Temp 18
+--- Clocking to 20 seconds.
+Preclocking Controller with TS:10000 = 73.09090897673933 and Blower:30000 = OFF and Heater:20000 = OFF
+Preclocking Room
+Temperature Sensor Temp is: 69 degrees F
+Clocking Controller with TS:10000 = 69.04545448836967 and Blower:30000 = OFF and Heater:20000 = OFF
+Heater is switched OFF
+Blower is switched OFF
+Temperature is 69.04545448836967, set heater to false and blower to false
+Clocking Room
+Passes: room State 19
+Passes: room Temp 19
