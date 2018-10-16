@@ -59,7 +59,7 @@ public class ControllerTest {
      * Test of clock method, of class Controller.
      */
     @Test
-    public void testOperation() {
+    public void testOperation()throws MissingComponentException {
 
         double[] temps = {65.0, 67.0, 68.0, 70.0, 71.0, 72.0, 71.0, 68.0, 67.0};
         boolean[] expected = {true, true, true, true, true, false, false, false, true};
@@ -81,7 +81,7 @@ public class ControllerTest {
      * Test connection between Heater and Blower, to see that they come and go together
      */
     @Test
-    public void testHeaterBlowerRelationship() {
+    public void testHeaterBlowerRelationship()throws MissingComponentException {
 
         double[] temps = {65.0, 67.0, 68.0, 70.0, 71.0, 72.0, 71.0, 68.0, 67.0};
         boolean[] expected = {true, true, true, true, true, false, false, false, true};

@@ -12,7 +12,7 @@ public class MissingComponentException extends Exception {
     
     
     public MissingComponentException(){
-        
+        super();
     }
     
     public MissingComponentException(String message){

@@ -13,7 +13,7 @@
  */
 public class TestP3 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MissingComponentException {
 
         Heater h1;
         Blower b1;
@@ -22,7 +22,7 @@ public class TestP3 {
         Logger logger;
         Clock clock;
 
-        print("P2 Test program by David Green dgreen@uab.edu");
+        print("P3 Test program by David Green dgreen@uab.edu");
         print("Testing P3 by Hunter Holmes hholmes1@uab.edu ");
 
         logger = new PrintLogger(20);

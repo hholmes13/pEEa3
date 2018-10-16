@@ -52,8 +52,9 @@ public class Clock {
     
     /**
      * preClock then clock all items
+     * @throws MissingComponentException
      */
-    public void run() {
+    public void run() throws MissingComponentException {
            
         clockCount++;
         logger.log(Logger.TIMESTAMP, "--- Clocking to " + clockCount + " seconds.");
@@ -73,8 +74,9 @@ public class Clock {
     /**
      * Run n times
      * @param n number of times to preClock then clock
+     * @throws MissingComponentException
      */
-    public void run(int n) {
+    public void run(int n) throws MissingComponentException {
         for (int i = 0; i < n; i++) {
             run();
         }

@@ -15,8 +15,9 @@ public interface Clockable {
      * Take actions based on notifications that the clock is about to happen.
      * The controller's latest actions were issued on second ago.
      * Generally used to compute dynamics before letting new control decisions occur
+     * @throws MissingComponentException
      */
-    public void preClock();
+    public void preClock() throws MissingComponentException;
     
     /**
      * Take actions for new second

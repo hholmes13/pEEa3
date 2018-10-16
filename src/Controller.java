@@ -99,11 +99,19 @@ public class Controller implements Clockable {
     }
 
     /**
-     * Do actions before clock (none needed yet)
+     * Do actions before clock
      */
     @Override
-    public void preClock() {
-        
+    public void preClock() throws MissingComponentException {
+        if (blower == null){
+            throw new MissingComponentException("Error: No Blower Connected");
+        }else if(heater == null){
+            throw new MissingComponentException("Error: No Heater Connected");
+        }else if(tempSensor == null){
+            throw new MissingComponentException("Error: No Temperature Sensor Connected");
+        }else{
+            //Do nothing
+        }
     }
     
     /**
@@ -114,14 +122,23 @@ public class Controller implements Clockable {
     public void clock() {
         double temp = tempSensor.getTemp();
         
-        boolean s = (temp < LOW_HEAT_TEMP) ||
-                    ( presentHeatState && !(temp > HIGH_HEAT_TEMP) );
+        boolean hs;
+        boolean bs;
         
-        heater.setState(s);
-        blower.setState(s);
-        presentHeatState = s;
-        presentBlowerState = s;
-        logger.log(Logger.INFO, "Temperature is " + temp + ", set heater and blower to " + s);
+        if((temp < LOW_HEAT_TEMP) ||
+                    ( presentHeatState && !(temp > HIGH_HEAT_TEMP) )){
+            hs = true;
+            bs = true;
+        }else{
+            hs = false;
+            bs = false;
+        }
+        
+        heater.setState(hs);
+        blower.setState(bs);
+        presentHeatState = hs;
+        presentBlowerState = bs;
+        logger.log(Logger.INFO, "Temperature is " + temp + ", set heater to " + hs + " and blower to " + bs);
     }
 
 }

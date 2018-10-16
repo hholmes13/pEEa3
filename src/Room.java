@@ -60,8 +60,8 @@ public class Room implements Clockable {
      * not the heater is running
      */
     @Override
-    public void preClock() {
-        if (blower.heater.getState()) {
+    public void preClock(){
+        if (blower.getState()) {
             roomTemp = (roomTemp + disturbance[dIndex] + this.blower.outputTemp) / 3.;
         } else {
             roomTemp = (roomTemp + disturbance[dIndex]) / 2.;

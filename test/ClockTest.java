@@ -83,7 +83,7 @@ public class ClockTest {
      * Test of run method, of class Clock.
      */
     @Test
-    public void testRun() {
+    public void testRun() throws MissingComponentException {
         c.run();
         assertEquals(1, i1.getPreClockCount());
         assertEquals(1, i1.getClockCount());
@@ -97,7 +97,7 @@ public class ClockTest {
      * Test of run method, of class Clock.
      */
     @Test
-    public void testRun_int() {
+    public void testRun_int()throws MissingComponentException {
         c.run(100);
         assertEquals(100, i1.getPreClockCount());
         assertEquals(100, i1.getClockCount());
