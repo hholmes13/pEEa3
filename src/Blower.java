@@ -61,7 +61,7 @@ public class Blower {
 
     /**
      * Allows  controller to set current blower state
-     * @param state 
+     * @param state desired state of blower
      */
     public void setState(boolean state) {
 

@@ -53,7 +53,7 @@ public class TempSensor {
 
     /**
      * Set the temp of the sensor
-     * @param temperature
+     * @param temperature temperature to set TempSensor to
      */
     public void setTemp(double temperature) {
         this.tsTemp = temperature;

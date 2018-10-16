@@ -20,12 +20,11 @@ public class Room implements Clockable {
     private double[] disturbance;
     private double roomTemp;
     private int dIndex;
-    private final static double HOT_AIR = 95.0;
 
     /**
      * Room Constructor
-     * @param tempDisturbance
-     * @param initialTemp
+     * @param tempDisturbance array of temperature disturbances
+     * @param initialTemp initial temp of room before controller takes over
      */
     public Room(double[] tempDisturbance, double initialTemp) {
         disturbance = tempDisturbance;
@@ -34,7 +33,7 @@ public class Room implements Clockable {
     }
 
     /**
-     * @return
+     * @return roomTemp current temperature of room
      */
     public double getTemp() {
         return roomTemp;
@@ -42,7 +41,7 @@ public class Room implements Clockable {
 
     /**
      * add a temperature sensor to a room
-     * @param ts
+     * @param ts temp sensor to add to room
      */
     public void add(TempSensor ts) {
         tempSensor = ts;
@@ -50,7 +49,7 @@ public class Room implements Clockable {
 
     /**
      * add a blower to a room
-     * @param blwr
+     * @param blwr blower to add to room
      */
     public void add(Blower blwr) {
         this.blower = blwr;
@@ -88,7 +87,7 @@ public class Room implements Clockable {
 
     /**
      * Provide a string for Room which will be stable for unit tests
-     * @return
+     * @return "Room"
      */
     @Override
     public String toString() {

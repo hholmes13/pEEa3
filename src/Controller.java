@@ -91,7 +91,7 @@ public class Controller implements Clockable {
     /**
      * Connect blower to the controller
      * Only one connection at a time is possible
-     * @param blower 
+     * @param blower blower to connect to controller
      */
     public void connect(Blower blower){
         this.blower = blower;

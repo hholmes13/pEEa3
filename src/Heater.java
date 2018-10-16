@@ -48,7 +48,7 @@ public class Heater {
      * sets state for the heater when prompted to change converts true/false to
      * ON/OFF for ease of displaying status
      *
-     * @param state
+     * @param state desired state of heater
      */
     public void setState(boolean state) {
 

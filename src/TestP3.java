@@ -74,7 +74,7 @@ public class TestP3 {
 
     /**
      * Print message if the boolean result is true
-     * @param result
+     * @param result 
      * @param message
      */
     public static void passFail(boolean result, String message) {
