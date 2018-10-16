@@ -2,13 +2,14 @@
  * File: Controller.java
  * Author: Hunter Holmes hholmes1@uab.edu
  * Assignment:  P3
+ * Vers: 1.2.0 10/14/2019 hah - added blower functionality and MissingComponentException
+ * Vers: 1.1.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  * Vers: 1.0.0 09/17/2018 hah - initial coding
- * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  */
 
 /**
- * Model a controller that makes logical heating decisions based on readings from
- * temperature sensor
+ * Model a controller that controls heater and blower based on readings from
+ * temperature sensor in a room
  *
  * @author Hunter Holmes hholmes1@uab.edu
  */
@@ -119,7 +120,7 @@ public class Controller implements Clockable {
     
     /**
      * Do one pass of the controller (read the temperature, determine 
-     * whether to turn heater & blower on or off, and then do it)
+     * whether to turn heater and blower on or off, and then do it)
      */
     @Override
     public void clock() {

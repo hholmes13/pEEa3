@@ -2,8 +2,9 @@
  * File: Blower.java
  * Author: Hunter Holmes hholmes1@uab.edu
  * Assignment:  P3
+ * Vers: 1.2.0 10/14/2019 hah - added blower functionality and MissingComponentException
+ * Vers: 1.1.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  * Vers: 1.0.0 09/17/2018 hah - initial coding
- * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  */
 
 /**
@@ -35,9 +36,8 @@ public class Blower {
     }
 
     /**
-     *  Creates blower with a logger
-     * @param logger 
-     * @param heater
+     * Creates blower with a logger
+     * @param logger
      */
     public Blower(Logger logger) {
         this.bUID = bUIDSource++;

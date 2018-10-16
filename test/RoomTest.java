@@ -1,8 +1,10 @@
 /*
  * File: RoomTest.java
- * Author: David Green DGreen@uab.edu
- * Assignment:  2018-4FallP1toP3 - EE333 Fall 2018
- * Vers: 1.0.0 09/02/2018 dgg - initial coding
+ * Author: Hunter Holmes hholmes1@uab.edu
+ * Assignment:  P3
+ * Vers: 1.2.0 10/14/2019 hah - added blower functionality and MissingComponentException
+ * Vers: 1.1.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
+ * Vers: 1.0.0 09/17/2018 hah - initial coding
  */
 
 import org.junit.Before;
@@ -11,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  * Test the Room
- * @author David Green DGreen@uab.edu
+ * @author Hunter Holmes hholmes1@uab.edu
  */
 public class RoomTest {
 

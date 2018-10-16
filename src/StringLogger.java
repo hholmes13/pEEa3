@@ -1,9 +1,10 @@
 /*
-  * File: StringLogger.java
-  * Author: Hunter Holmes hholmes1@uab.edu
-  * Assignment:  P3
-  * Vers: 1.0.0 09/17/2018 hah - initial coding
-  * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
+ * File: StringLogger.java
+ * Author: Hunter Holmes hholmes1@uab.edu
+ * Assignment:  P3
+ * Vers: 1.2.0 10/14/2019 hah - added blower functionality and MissingComponentException
+ * Vers: 1.1.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
+ * Vers: 1.0.0 09/17/2018 hah - initial coding
  */
 
 import java.util.ArrayList;
@@ -43,8 +44,8 @@ public class StringLogger extends Logger {
     }
 
     /**
-     * Collect a string if level is >= threshold. The logger class defines
-     * common values for level.
+     * Collect a string if level is greater than or equal to threshold. 
+     * The logger class defines common values for level.
      * @param level value noting the type of the information
      * @param logEntry text to be part of the accumulated string log
      */

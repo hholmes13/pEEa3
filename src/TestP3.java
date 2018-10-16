@@ -1,7 +1,8 @@
 /*
- * File: TestP2.java
+ * File: TestP3.java
  * Author: David Green DGreen@uab.edu
  * Assignment:  Fall2018P1toP3 - EE333 Fall 2018
+ * Vers: 1.3.0:10/15/2018 hah - Converted to TestP3 for P3
  * Vers: 1.2.0 09/25/2018 dgg - use Clock object
  * Vers: 1.1.0 09/02/2018 dgg - converted to TestP2 for P2
  * Vers: 1.0.0 08/18/2018 dgg - initial coding
@@ -10,6 +11,7 @@
 /**
  * Test program for P3
  * @author David Green DGreen@uab.edu
+ * @author Hunter Holmes hholmes1@uab.edu
  */
 public class TestP3 {
 

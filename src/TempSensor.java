@@ -1,9 +1,10 @@
 /*
  * File: TempSensor.java
  * Author: Hunter Holmes hholmes1@uab.edu
- * Assignment:  P2
+ * Assignment:  P3
+ * Vers: 1.2.0 10/14/2019 hah - added blower functionality and MissingComponentException
+ * Vers: 1.1.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  * Vers: 1.0.0 09/17/2018 hah - initial coding
- * Vers: 2.0.0 09/26/2018 hah - modifications and additions for P2, added loggers and clock
  */
 
 /**
@@ -23,6 +24,7 @@ public class TempSensor {
     /**
      * Constructor for TempSensor object Creates a TempSensor Creates a valid
      * UID and increases the count of TempSensors
+     * @param logger
      */
     public TempSensor(Logger logger) {
         tsUID = UIDSource++;
